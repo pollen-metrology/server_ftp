@@ -1,0 +1,11 @@
+version: "2"
+services:
+  proftp:
+    image: pollenm/server_ftp
+    ports:
+      - "21:21"
+#     - "42042:21"
+    network_mode: "host"
+    volumes:
+      - /home/docker/pollenftp/data/:/home/
+      - /home/docker/pollenftp/ftpd.passwd:/etc/proftpd/ftpd.passwd
