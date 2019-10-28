@@ -3,6 +3,7 @@ services:
   pollenftp:
     container_name: server_ftp
     image: pollenm/docker_server_ftp
+    restart: always
     ports:
       - "21:21"
 #     - "42042:21"
