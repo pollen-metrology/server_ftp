@@ -11,3 +11,4 @@ services:
     volumes:
       - /home/docker/server_ftp/data/:/home/
       - /home/docker/server_ftp/ftpd.passwd:/etc/proftpd/ftpd.passwd
+    entrypoint: bash -c "echo '127.0.0.1       hebus.pollen-metrology.com' >> /etc/hosts && /entrypoint.sh && proftpd -n"  
